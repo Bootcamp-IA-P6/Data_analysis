@@ -6,10 +6,12 @@ import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.io as pio
+from PIL import Image
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score, davies_bouldin_score
 from sklearn.decomposition import PCA
+from PIL import Image
 
 # ── Template global Plotly — tema oscuro ─────────────────────────────────────
 _TEXT  = "#e8eaf0"
@@ -48,9 +50,10 @@ pio.templates["dark_airbnb"] = go.layout.Template(
 pio.templates.default = "dark_airbnb"
 
 # ── Page config ───────────────────────────────────────────────────────────────
+_favicon = Image.open("assets/favicon.png")
 st.set_page_config(
     page_title="Airbnb: Madrid vs Milán",
-    page_icon="assets/favicon.png",
+    page_icon=_favicon,
     layout="wide",
     initial_sidebar_state="expanded"
 )

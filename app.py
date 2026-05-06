@@ -50,7 +50,7 @@ pio.templates.default = "dark_airbnb"
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Airbnb: Madrid vs Milán",
-    page_icon="src/favicon.png",
+    page_icon="assets/favicon.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
